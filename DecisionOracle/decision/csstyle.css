@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.oracle-container {
+    text-align: center;
+    background-color: rgba(47, 54, 64, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    max-width: 600px; /* Limit container width */
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+/* Ensure correct wheel appearance */
+.wheel-container {
+    position: relative;
+    margin: 20px auto; /* Center the wheel horizontally */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    overflow: hidden;
+}
+
+.wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform 2s ease-out;
+}
+
+/* Correct positioning and styling for halves */
+.half {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    line-height: 1.2em; /* Adjust text alignment */
+    overflow: hidden; /* Ensure text does not overflow */
+}
+
+/* Green half */
+.half.left {
+    background-color: green;
+    transform: rotate(0deg); /* No rotation needed */
+    left: 0; /* Align to the left side */
+}
+
+/* Red half */
+.half.right {
+    background-color: red;
+    transform: rotate(180deg); /* Rotate 180 degrees */
+    right: 0; /* Align to the right side */
+}
+
+/* Adjust text alignment for each half */
+.label {
+    display: block;
+    width: 100%; /* Full width to ensure proper alignment */
+    text-align: center; /* Center text horizontally */
+    margin-top: 20px; /* Add margin to push text into view */
+}
+
+.label.left {
+    color: white; /* Label color for 'Do it!' */
+    transform: rotate(0deg); /* Rotate text to fit correctly in the red half */
+    justify-content: center;
+}
+
+.label.right {
+    color: white; /* Label color for 'Don't do it!' */
+    transform: rotate(180deg); /* Rotate text to fit correctly in the red half */
+}
+
+
+.needle {
+    position: absolute;
+    top: -10;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 40px solid white;
+    transform: translate(-50%, -50%) rotate(90deg); /* Rotate needle */
+    z-index: 1; /* Ensure the needle is above the wheel */
+}
+
+
+
+#resultBox {
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 1em;
+}

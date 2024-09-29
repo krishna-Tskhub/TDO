@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Decision Oracle</title>
+    <link rel="stylesheet" href="csstyle.css">
+</head>
+<body>
+    <div class="oracle-container">
+        <h1>The Decision Oracle</h1>
+        <p>Let the Oracle decide when you can't!</p>
+        
+        <!-- Input Field -->
+        <input type="text" id="question" placeholder="Should I carry an umbrella?">
+        
+        <!-- Buttons -->
+        <button id="askButton">Ask the Oracle</button>
+        <button id="resetButton" style="display:none;">Ask Another Question</button>
+        
+        <!-- Result -->
+        <p id="response" class="result"></p>
+
+        <!-- Wheel Container -->
+        <div class="wheel-container">
+            <div class="needle"></div>
+            <div class="wheel">
+                <div class="half left" id="leftHalf">
+                    <div class="label left">Do it!</div>
+                </div>
+                <div class="half right">
+                    <div class="label right">Don't do it!</div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Result Text Box -->
+        <input type="text" id="resultBox" readonly style="display:none;" />
+    </div>
+
+    <script src="jsscript.js"></script>
+</body>
+</html>
